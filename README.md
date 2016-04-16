@@ -63,6 +63,18 @@ pg_prove -d [mydb] test/*.sql
 
 If sqitch deploy fails for some reason, something is wrong.
 
+# Details
+
+The assumption is that the metadata is correct, and that either you
+want to redo or create anew the geometry tables.
+
+So, the tests make sure that the tables exist, that they link to each
+other via foreign key constraints, and finally that the geometries are
+consistent with the stored metadata.  If the tests pass, there are no
+problems with the data.  If the tests do not pass, then you need to
+run the sqitch code to fix the geometries.
+
+
 # License
 
 released under GPL-v2
