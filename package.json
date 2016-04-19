@@ -1,0 +1,25 @@
+{
+  "name": "calvad_wim_geometries",
+  "version": "1.0.0",
+  "description": "This repoo exists to make (or fix) WIM site geometries in a PostgreSQL/PostGIS database.",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmarca/calvad_wim_geometries.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmarca/calvad_wim_geometries/issues"
+  },
+  "homepage": "https://github.com/jmarca/calvad_wim_geometries#readme"
+}

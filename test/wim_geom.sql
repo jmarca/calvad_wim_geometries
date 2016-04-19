@@ -9,7 +9,6 @@ SELECT no_plan();
 SELECT pass('Test wim_geom!');
 
 -- is there a wim_stations table?
-
 SELECT has_table('public', 'wim_stations', 'there is a wim_stations table');
 
 -- are  there join tables?
@@ -20,11 +19,22 @@ SELECT has_table('public', 'wim_points_4326', 'there is a wim_points_4326 table'
 SELECT has_table('public', 'geom_points_4269','there is a geom_points_4269 table');
 SELECT has_table('public', 'geom_points_4326','there is a geom_points_4326 table');
 
--- are things linked up as expected?
-
+-- are primary keys set up?
 SELECT col_is_pk('public', 'wim_stations', 'site_no', 'wim stations site_no is pk' );
 SELECT col_is_pk('public', 'geom_points_4269','gid', 'geom points 4269 gid is pk' );
 SELECT col_is_pk('public', 'geom_points_4326','gid', 'geom points 4326 gid is pk' );
+
+SELECT col_is_pk('public', 'wim_points_4326','wim_id', 'geom points 4326 gid is pk' );
+SELECT col_is_pk('public', 'wim_points_4269','wim_id', 'geom points 4269 gid is pk' );
+
+
+-- -- are indexes set up?
+-- SELECT indexes_are('public', 'wim_stations', 'site_no',ARRAY[:indexes], 'wim_stations has index' );
+-- SELECT indexes_are('public', 'geom_points_4269','gid',  ARRAY[:indexes],'geom_points_4269 has index' );
+-- SELECT indexes_are('public', 'geom_points_4326','gid',  ARRAY[:indexes],'geom_points_4326 has index' );
+-- SELECT indexes_are('public', 'wim_points_4269' ,'gid',  ARRAY[:indexes],'wim_points_4269 has index' );
+-- SELECT indexes_are('public', 'wim_points_4326' ,'gid',  ARRAY[:indexes],'wim_points_4326 has index' );
+
 
 -- the geom_ids table was an idea to solve a problem I no longer have,
 -- and I'm abandoning it for the future
