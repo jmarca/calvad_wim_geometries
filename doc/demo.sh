@@ -1,23 +1,11 @@
-# demo sqitch
+# Part 2
 
-sqitch init calvad_wim_geometries --uri https://github.com/jmarca/calvad_wim_geometries --engine pg
-createdb -U slash -h 127.0.0.1 brokendb
-sqitch target add brokendb db:pg://slash@127.0.0.1/brokendb
+# create a test database
+./node_modules/.bin/mocha test/test_deploy.js --timeout 0
+
+# note the db name, and change below
+
+sqitch target add brokendb db:pg://slash@127.0.0.1/8_22_43
 sqitch engine add pg brokendb
-sqitch add brooklyn  -m 'Hello Brooklyn!'
-sqitch deploy
-sqitch revert
-sqitch deploy
-psql brokendb
 
-# look at the tables
-\dt
-\dn
-\dt sqitch.
-select * from sqitch.changes ;
-select * from sqitch.dependencies ;
-select * from sqitch.events ;
-select * from sqitch.projects ;
-select * from sqitch.releases ;
-select * from sqitch.tags ;
-\q
+sqitch add fix_4269_geoms -m 'Fix metadata vs geom mismatch'
