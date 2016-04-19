@@ -3,3 +3,4 @@
 %uri=https://github.com/jmarca/calvad_wim_geometries
 
 fix_4269_geoms 2016-04-19T15:26:07Z James E. Marca <james@activimetrics.com> # Fix metadata vs geom mismatch
+fix_4326_geoms 2016-04-19T22:34:14Z James E. Marca <james@activimetrics.com> # Fix reprojected geometry mismatch
