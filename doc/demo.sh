@@ -14,3 +14,6 @@ show the edited file
 
 run it
 run the test
+
+
+sqitch add fix_4324_geoms -m 'Fix reprojected geometry mismatch'
