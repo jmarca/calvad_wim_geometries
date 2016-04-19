@@ -5,7 +5,12 @@
 
 # note the db name, and change below
 
-sqitch target add brokendb db:pg://slash@127.0.0.1/8_22_43
+sqitch target add brokendb db:pg://slash@127.0.0.1/wim8_22_43
 sqitch engine add pg brokendb
 
 sqitch add fix_4269_geoms -m 'Fix metadata vs geom mismatch'
+
+show the edited file
+
+run it
+run the test
