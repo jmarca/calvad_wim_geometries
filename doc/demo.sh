@@ -16,4 +16,4 @@ run it
 run the test
 
 
-sqitch add fix_4324_geoms -m 'Fix reprojected geometry mismatch'
+sqitch add fix_4326_geoms -m 'Fix reprojected geometry mismatch'
