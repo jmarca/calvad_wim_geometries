@@ -4,7 +4,7 @@ RESET client_min_messages;
 
 BEGIN;
 --SELECT no_plan();
-SELECT plan(1);
+SELECT plan(2);
 
 SELECT pass('Test tables are exactly');
 
