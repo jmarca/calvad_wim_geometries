@@ -100,15 +100,14 @@ SELECT results_eq(
 );
 
 
--- make sure join relations are all there
 select results_eq(
-    'select count(*) from wim_stations',
-    'select count(*) from wim_points_4326'
+    'select site_no from wim_stations order by site_no',
+    'select wim_id from wim_points_4269 order by wim_id'
 );
 
 select results_eq(
-    'select count(*) from wim_stations',
-    'select count(*) from wim_points_4269'
+    'select site_no from wim_stations order by site_no',
+    'select wim_id from wim_points_4326 order by wim_id'
 );
 
 -- that just about covers it, sportsfans
