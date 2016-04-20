@@ -22,7 +22,7 @@ SELECT has_table('public', 'geom_points_4269','there is a geom_points_4269 table
 SELECT has_table('public', 'geom_points_4326','there is a geom_points_4326 table');
 
 
--- -- this one is going to fail
+-- this one is going to fail
 -- select tables_are(ARRAY['wim_stations'
 --                        ,'wim_points_4269','wim_points_4326'
 --                        ,'geom_points_4269','geom_points_4326'
