@@ -2,6 +2,8 @@
 
 BEGIN;
 
--- XXX Add verifications here.
+SELECT wim_id,gid
+FROM wim_points_4326
+ WHERE FALSE;
 
 ROLLBACK;

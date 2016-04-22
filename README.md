@@ -1,6 +1,6 @@
 # Make or fix WIM geometries
 
-This repoo exists to make (or fix) WIM site geometries in a
+This repo exists to make (or fix) WIM site geometries in a
 PostgreSQL/PostGIS database.
 
 It turns out that for historical reasons, the WIM-Geometry join table
